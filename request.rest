@@ -1,0 +1,37 @@
+### Create a new post
+POST http://localhost:3000/post
+Content-Type: application/json
+
+{
+  "title": "First Post",
+  "content": "This is my first post content",
+  "sender": "user1"
+}
+
+### Create another post
+POST http://localhost:3000/post
+Content-Type: application/json
+
+{
+  "title": "Second Post",
+  "content": "Another post by a different sender",
+  "sender": "user2"
+}
+
+### Get all posts
+GET http://localhost:3000/post
+
+### Get posts by sender
+GET http://localhost:3000/post?sender=user1
+
+### Get post by ID (replace with actual ID from create response)
+GET http://localhost:3000/post/POST_ID_HERE
+
+### Update a post (replace with actual ID)
+PUT http://localhost:3000/post/POST_ID_HERE
+Content-Type: application/json
+
+{
+  "title": "Updated Title",
+  "content": "Updated content"
+}
