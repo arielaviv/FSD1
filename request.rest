@@ -35,3 +35,43 @@ Content-Type: application/json
   "title": "Updated Title",
   "content": "Updated content"
 }
+
+### Create a comment (replace postId with actual post ID)
+POST http://localhost:3000/comment
+Content-Type: application/json
+
+{
+  "content": "Great post!",
+  "postId": "POST_ID_HERE",
+  "author": "user2"
+}
+
+### Create another comment
+POST http://localhost:3000/comment
+Content-Type: application/json
+
+{
+  "content": "I agree, nice post!",
+  "postId": "POST_ID_HERE",
+  "author": "user3"
+}
+
+### Get all comments
+GET http://localhost:3000/comment
+
+### Get comments by post ID (replace with actual post ID)
+GET http://localhost:3000/comment?postId=POST_ID_HERE
+
+### Get comment by ID (replace with actual comment ID)
+GET http://localhost:3000/comment/COMMENT_ID_HERE
+
+### Update a comment (replace with actual comment ID)
+PUT http://localhost:3000/comment/COMMENT_ID_HERE
+Content-Type: application/json
+
+{
+  "content": "Updated comment text"
+}
+
+### Delete a comment (replace with actual comment ID)
+DELETE http://localhost:3000/comment/COMMENT_ID_HERE
