@@ -3,11 +3,13 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const postRoutes = require("./routes/post");
+const commentRoutes = require("./routes/comment");
 
 const app = express();
 app.use(express.json());
 
 app.use("/post", postRoutes);
+app.use("/comment", commentRoutes);
 
 const PORT = process.env.PORT || 3000;
 
